@@ -10,6 +10,7 @@ const submitBtn = document.getElementById("submitBtn");
 
 // Table body
 const tableBody = document.getElementById("tableBody");
+const tableContainer = document.querySelector(".table-container");
 
 // Data & edit tracker
 let students = [];
@@ -110,8 +111,13 @@ function displayStudents() {
     });
 
     // Dynamic vertical scrollbar
-    const tableContainer = document.querySelector(".table-container");
-    tableContainer.style.overflowY = students.length > 4 ? "auto" : "hidden";
+     if (students.length > 3) {
+        tableContainer.style.maxHeight = "300px";
+        tableContainer.style.overflowY = "auto";
+    } else {
+        tableContainer.style.maxHeight = "auto";
+        tableContainer.style.overflowY = "hidden";
+    }
 }
 
 // Edit Student
@@ -137,3 +143,4 @@ function deleteStudent(index) {
         displayStudents();
     }
 }
+

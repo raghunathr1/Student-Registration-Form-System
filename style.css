@@ -91,7 +91,7 @@ button {
 }
 
 button:hover {
-    background-color: #63e2e2;
+    background-color: #f09bf3;
 }
 
    /* Display Section */
@@ -113,10 +113,11 @@ button:hover {
 /* Scrollable Table Container */
 
 .table-container {
-    max-height: 350px;
-    overflow-y: auto;
-    border: 3px solid #0c0c0c;
+    max-height: 300px;   
+    overflow-y: hidden; 
+    border: 3px solid #0a0a09;
 }
+
 
 /* Table */
 
@@ -190,3 +191,4 @@ tbody tr:nth-child(even) {
         grid-template-columns: 1fr;
     }
 }
+
